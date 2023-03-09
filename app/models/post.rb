@@ -1,12 +1,12 @@
 class Post < ApplicationRecord
-  belongs_to :user
   has_many :comments
+  belongs_to :user
   has_many :likes
 
   before_save :update_post_counter
 
   def update_post_counter
-    self.user.update(post_counter: self.user.posts.count)
+    user.update(post_counter: user.posts.count)
   end
 
   def recent_comments
