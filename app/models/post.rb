@@ -6,7 +6,7 @@ class Post < ApplicationRecord
   validate :title, presence: true
   validate :title, length: { maximum: 250 }
   validate :comment_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
-
+  validate :likes_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   before_save :update_post_counter
 
   def update_post_counter
