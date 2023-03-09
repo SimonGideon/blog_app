@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Like, type: :model do
-    user = User.create(name: 'Luke', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Dj from Kenya.')
-    post = Post.new(title: 'My first post', text: 'This is my first post', user: user)
-    before { post.save }
+  user = User.create(name: 'Luke', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Dj from Kenya.')
+  post = Post.new(title: 'My first post', text: 'This is my first post', user: user)
+  before { post.save }
   describe 'validations' do
     it 'is not valid without a user' do
       like = Like.new(post: post)
@@ -16,4 +16,3 @@ RSpec.describe Like, type: :model do
     end
   end
 end
-
