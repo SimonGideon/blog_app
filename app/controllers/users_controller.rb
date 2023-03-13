@@ -4,6 +4,7 @@ class UsersController < ApplicationController
     end
 
     def show
-        @posts = Post.find(params[:id])
+        @user = User.find(params[:id])
+        # @posts = Post.find(params[:id])
     end
 end
