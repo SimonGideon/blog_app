@@ -1,4 +1,5 @@
 <%= stylesheet_link_tag 'application.css' %>
+<%= render "/shared/nav_bar"%>
 <div id="container">
   <% @users.each do |user| %>
     <%= link_to user_path(user) do %>
