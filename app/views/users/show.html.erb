@@ -1,23 +1,24 @@
 <%= render "shared/user_banner" %>
 <div id="user-post">
-<div id="span">
+  <div id="span">
     <h1>About Me:</h1>
     <p>
-    <%= @user.bio %>
+      <%= @user.bio %>
     </p>
-</div>
-    <div id="container">
+  </div>
+  <div id="container">
     <h2>Posts</h2>
-        <% @user.recent_posts.each do |post| %>
+    <% @user.recent_posts.each do |post| %>
+      <%= link_to user_post_path(@user, post) do %>
         <div id="data-cont">
-        <div id="details">
+          <div id="details">
             <p><%= post.title %></p>
             <p id='no'>Comments: <%= post.comment_counter %></p>
             <p id='no'>Likes: <%= post.likes_counter %></p>
+          </div>
         </div>
-        </div>
-        <% end %>
-          <%= link_to "Show All Posts", user_posts_path(@user) %>
-    </div>
+      <% end %>
+    <% end %>
+    <%= link_to "Show All Posts", user_posts_path(@user) %>
+  </div>
 </div>
-
