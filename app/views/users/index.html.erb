@@ -1,7 +1,7 @@
 <%= stylesheet_link_tag 'application.css' %>
 <div id="container">
   <% @users.each do |user| %>
-    <%= link_to user_posts_path(user) do %>
+    <%= link_to user_path(user) do %>
       <div id="user-data">
         <img src="<%= user.photo %>">
         <div id="details">
