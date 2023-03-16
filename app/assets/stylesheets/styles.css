@@ -60,4 +60,30 @@ img {
 .com-txt {
     white-space: pre-wrap;
   }
+
+  #posts h3 {
+    margin: auto;
+  }
+
+  #post-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: grey;
+    padding: 0.5rem;
+  }
+  #post-header span {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #each-post {
+    width: 50%;
+    margin: auto;
+  }
+
+  #post-sec {
+    border: 2px solid grey;
+    padding: 0.5rem;
+  }
   
