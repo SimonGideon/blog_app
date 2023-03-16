@@ -1,7 +1,7 @@
 <%= render "shared/user_banner" %>
 <div id="posts">
 <h3>POSTS</h3>
-  <% @user.posts.each do |post| %>
+  <% @user.recent_posts.each do |post| %>
   <%= link_to user_post_path(@user, post) do %>
   <div id="data-cont">
     <div id="details">
