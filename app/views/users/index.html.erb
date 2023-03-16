@@ -1,13 +1,15 @@
 <%= stylesheet_link_tag 'application.css' %>
 <div id="container">
   <% @users.each do |user| %>
-  <div id="data-cont">
-    <img src="<%= user.photo %>">
-    <div id="details">
-    <p><%= user.name %></p>
-    <p id='no'>Number of Posts: <%= user.posts_counter %></p>
-    </div>
-  </div>
+    <%= link_to user_posts_path(user) do %>
+      <div id="user-data">
+        <img src="<%= user.photo %>">
+        <div id="details">
+          <p><%= user.name %></p>
+          <p id='no'>Number of Posts: <%= user.posts_counter %></p>
+        </div>
+      </div>
+    <% end %>
   <% end %>
 </div>
-
+~~
