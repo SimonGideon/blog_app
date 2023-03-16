@@ -8,13 +8,22 @@ img {
   align-items: center;
 }
 
-#data-cont {
+#user-data {
+  width: 100%;
+}
+
+#data-count {
+  width: 50%;
+}
+
+#data-cont, #user-data{
+  text-decoration: none;
+  color: black;
   display: flex;
   flex-direction: row;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
   border-radius: 20px;
-  width: 50%;
   padding: 1.5rem;
   margin: 1rem;
 }
@@ -52,7 +61,7 @@ img {
 }
 
 #comm-img {
-  width: 8%;
+  width: 15%;
 }
 
 .com-txt {
