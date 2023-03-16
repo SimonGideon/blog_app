@@ -16,7 +16,8 @@ img {
   width: 50%;
 }
 
-#data-cont, #user-data{
+#data-cont,
+#user-data {
   text-decoration: none;
   color: black;
   display: flex;
