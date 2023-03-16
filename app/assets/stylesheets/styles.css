@@ -36,3 +36,28 @@ img {
 #no{
     align-self: flex-end;
 }
+
+/* posts */
+#posts {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    backdrop-filter: blur(10px);
+}
+
+.comment {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+#comm-img {
+    width: 8%;
+}
+
+.com-txt {
+    white-space: pre-wrap;
+  }
+  

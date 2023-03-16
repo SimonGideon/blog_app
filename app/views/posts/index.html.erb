@@ -1,4 +1,20 @@
+<%= render "shared/user_banner" %>
 <h1>User Posts</h1>
-<% @posts.each do |post| %>
-  <p><%= post.title %></p>
-<% end %>
+<div id="posts">
+  <% @user.posts.each do |post| %>
+  <div id="data-cont">
+    <div id="details">
+      <p>Post Title: <%= post.title %></p>
+      <div id="comments">
+          <% post.comments.each do |comment| %>
+            <div class="comment">
+              <img id='comm-img' src="<%= comment.user.photo %>">
+              <p class="commenter"><%= comment.user.name %></p>
+              <p class="com-txt"><%= comment.text %></p>
+            </div>
+          <% end %>
+        </div>
+    </div>
+  </div>
+  <% end %>
+  <div>

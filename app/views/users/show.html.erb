@@ -1,3 +1,19 @@
-<h1>Selected user</h1>
-<p>Selected id:<%= @user.id%></p>
-<p>Selected name:<%= @user.name%></p>
+<%= render "shared/user_banner" %>
+<div>
+    <h1>Posts</h1>
+    <p>
+    <%= @user.bio %>
+    </p>
+    <div id="container">
+        <% @user.posts.each do |post| %>
+        <div id="data-cont">
+        <div id="details">
+            <p><%= post.title %></p>
+            <p id='no'>Number of Comments: <%= post.comment_counter %></p>
+            <p id='no'>Number of Likes: <%= post.likes_counter %></p>
+        </div>
+        </div>
+        <% end %>
+    </div>
+</div>
+
