@@ -1,9 +1,11 @@
 <%= render "shared/user_banner" %>
-<div>
-    <h1>Posts</h1>
+<div id="user-post">
+<span id="span">
+<h1>Posts</h1>
     <p>
     <%= @user.bio %>
     </p>
+</span>
     <div id="container">
         <% @user.posts.each do |post| %>
         <div id="data-cont">
