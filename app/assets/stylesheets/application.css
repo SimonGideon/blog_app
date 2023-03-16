@@ -1,15 +1,97 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+img {
+  border-radius: 50%;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#user-data {
+  width: 100%;
+}
+
+#data-count {
+  width: 50%;
+}
+
+#data-cont,
+#user-data {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin: 1rem;
+}
+
+#details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2rem;
+  width: 100%;
+}
+
+#no {
+  align-self: flex-end;
+}
+
+#user-post p {
+  width: 50%;
+}
+
+/* posts */
+#posts {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  backdrop-filter: blur(10px);
+}
+
+.comment {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+#comm-img {
+  width: 15%;
+}
+
+.com-txt {
+  white-space: pre-wrap;
+}
+
+#posts h3 {
+  margin: auto;
+}
+
+#post-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: grey;
+  padding: 0.5rem;
+}
+
+#post-header span {
+  display: flex;
+  flex-direction: row;
+}
+
+#each-post {
+  width: 50%;
+  margin: auto;
+}
+
+#post-sec {
+  border: 2px solid grey;
+  padding: 0.5rem;
+}
