@@ -1,2 +1,23 @@
-<h1>Individual Post</h1>
-<p>Post title: <%= @post.title %></p>
+<section id="each-post">
+    <img src="<%= @post.user.photo %>">
+<div id='post-header'>
+    <p><%= @post.title %> By: <%= @post.user.name%></p>
+    <span>
+        <p>comments: <%= @post.comment_counter %></p>
+        <p>likes: <%= @post.likes_counter %></p>
+    </span>
+</div>
+<div id="post-sec">
+    <p>Post text: <%= @post.text %></p>
+    <div id="comments">
+  <% @post.recent_comments.each do |comment| %>
+    <div class="comment">
+      <img id='comm-img' src="<%= comment.user.photo %>">
+      <p class="commenter"><%= comment.user.name %></p>
+      <p><%= comment.text %></p>
+    </div>
+  <% end %>
+</div>
+</div>
+
+</section>
