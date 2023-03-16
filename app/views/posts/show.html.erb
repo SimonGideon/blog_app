@@ -10,7 +10,7 @@
 <div id="post-sec">
     <p>Post text: <%= @post.text %></p>
     <div id="comments">
-  <% @post.comments.each do |comment| %>
+  <% @post.recent_comments.each do |comment| %>
     <div class="comment">
       <img id='comm-img' src="<%= comment.user.photo %>">
       <p class="commenter"><%= comment.user.name %></p>
