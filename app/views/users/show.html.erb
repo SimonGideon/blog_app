@@ -1,12 +1,13 @@
 <%= render "shared/user_banner" %>
 <div id="user-post">
 <div id="span">
-    <h1>Posts</h1>
+    <h1>About Me:</h1>
     <p>
     <%= @user.bio %>
     </p>
 </div>
     <div id="container">
+    <h2>Posts</h2>
         <% @user.recent_posts.each do |post| %>
         <div id="data-cont">
         <div id="details">
@@ -16,6 +17,7 @@
         </div>
         </div>
         <% end %>
+          <%= link_to "Show All Posts", user_posts_path(@user) %>
     </div>
 </div>
 
