@@ -1,0 +1,38 @@
+img {
+    border-radius: 50%;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#data-cont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 20px;
+    width: 50%;
+    padding: 1.5rem;
+    margin: 1rem;
+}
+
+#details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2rem;
+    width: 100%;
+}
+
+#no{
+    align-self: flex-end;
+}
