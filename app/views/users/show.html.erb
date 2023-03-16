@@ -1,18 +1,18 @@
 <%= render "shared/user_banner" %>
 <div id="user-post">
-<span id="span">
-<h1>Posts</h1>
+<div id="span">
+    <h1>Posts</h1>
     <p>
     <%= @user.bio %>
     </p>
-</span>
+</div>
     <div id="container">
         <% @user.posts.each do |post| %>
         <div id="data-cont">
         <div id="details">
             <p><%= post.title %></p>
-            <p id='no'>Number of Comments: <%= post.comment_counter %></p>
-            <p id='no'>Number of Likes: <%= post.likes_counter %></p>
+            <p id='no'>Comments: <%= post.comment_counter %></p>
+            <p id='no'>Likes: <%= post.likes_counter %></p>
         </div>
         </div>
         <% end %>
