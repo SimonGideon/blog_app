@@ -18,14 +18,13 @@ class PostsController < ApplicationController
   def create
     @user = current_user
     @post = @user.posts.build(post_params)
-  
+
     if @post.save
       redirect_to user_post_path(@user, @post), notice: 'Post was successfully created.'
     else
       render :new
     end
   end
-  
 
   private
 
