@@ -1,15 +1,9 @@
 require 'rails_helper'
-
-# Specs in this file have access to a helper object that includes
-# the LikesHelper. For example:
-#
-# describe LikesHelper do
-#   describe "string concat" do
-#     it "concats two strings with spaces" do
-#       expect(helper.concat_strings("this","that")).to eq("this that")
-#     end
-#   end
-# end
 RSpec.describe LikesHelper, type: :helper do
   pending "add some examples to (or delete) #{__FILE__}"
+  # describe '#like_form' do
+  #   it 'returns a form to create a like' do
+  #     expect(like_form).to have_css('form')
+  #   end
+  # end
 end
