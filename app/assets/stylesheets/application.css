@@ -90,6 +90,7 @@ img {
 #each-post {
   width: 50%;
   margin: auto;
+  margin-top: 100px;
 }
 
 #post-sec {
