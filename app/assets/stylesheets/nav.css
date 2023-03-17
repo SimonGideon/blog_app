@@ -1,62 +1,61 @@
 .nav {
-    box-shadow: rgb(74, 87, 72) 0 3px 8px;
-    background-color: rgb(255, 255, 255);
-    top: 0;
-    right: 0;
-    left: 0;
-    width: 100%;
-    position: fixed;
-    color: #1db954;
-    z-index: 1;
-  }
-  
-  .nav ul {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    justify-content: space-between;
-    padding-right: 3rem;
-  }
-  
-  .nav i.fas,
-  i.fa-sharp {
-    color: #1db954;
-  }
-  
-  #home {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    font-size: 1.4rem;
-  }
-  
-  .nav form {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    border: 2px solid #1db954;
-    border-radius: 5px;
-  }
-  
-  .nav input[type="text"] {
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    font-size: 18px;
-    margin-right: 10px;
-    width: 70%;
-  }
-  
-  .nav button[type="submit"] {
-    background-color: transparent;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .nav li:last-child {
-    float: right;
-  }
-  
+  box-shadow: rgb(74, 87, 72) 0 3px 8px;
+  background-color: rgb(255, 255, 255);
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  color: #1db954;
+  z-index: 1;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-between;
+  padding-right: 3rem;
+}
+
+.nav i.fas,
+i.fa-sharp {
+  color: #1db954;
+}
+
+#home {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.4rem;
+}
+
+.nav form {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: 2px solid #1db954;
+  border-radius: 5px;
+}
+
+.nav input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  margin-right: 10px;
+  width: 70%;
+}
+
+.nav button[type="submit"] {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav li:last-child {
+  float: right;
+}
