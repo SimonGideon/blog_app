@@ -1,4 +1,5 @@
 <%= render "shared/user_banner" %>
+<%= render "/shared/nav_bar"%>
 <div id="user-post">
   <div id="span">
     <h1>About Me:</h1>
@@ -8,6 +9,7 @@
   </div>
   <div id="container">
     <h2>Posts</h2>
+    <%= link_to 'New Post', new_user_post_path(current_user) %>
     <% @user.recent_posts.each do |post| %>
       <%= link_to user_post_path(@user, post) do %>
         <div id="data-cont">

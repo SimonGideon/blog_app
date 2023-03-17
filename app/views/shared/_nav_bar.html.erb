@@ -1,16 +1,23 @@
 <%= render "/shared/head"%>
+<%= stylesheet_link_tag 'nav.css' %>
 <nav class="nav">
   <ul>
-    <li><%= link_to root_path do %><i class="fas fa-home"></i><% end %></li>
-    <li><%= link_to  do %><i class="fas fa-file-alt"></i><% end %></li>
+  <ul id="home">
+    <li><%= link_to root_path  do %><i class="fa-sharp fa-solid fa-blog"></i><% end %></li>
+    <span>Blog</span>
+  </ul>
     <li>
       <%= form_tag search_path, method: :get do %>
         <%= text_field_tag :query, params[:query], placeholder: "Search" %>
-        <button type="submit"><i class="fas fa-search"></i></button>
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
       <% end %>
     </li>
-    <li><%= link_to  do %><i class="fas fa-bell"></i><% end %></li>
-    <li><%= link_to  do %><i class="fas fa-envelope"></i><% end %></li>
-    <li><%= link_to  do %><i class="fas fa-user"></i><% end %></li>
+    <ul id="home">
+      <li><%= link_to root_path do %><i class="fas fa-home"></i><% end %></li>
+      <li><%= link_to  do %><i class="fa-solid fa-message-middle"></i> <% end %></li>
+      <li><%= link_to  do %><i class="fas fa-bell"></i><% end %></li>
+      <li><%= link_to  do %><i class="fas fa-envelope"></i><% end %></li>
+      <li><%= link_to  do %><i class="fas fa-user"></i><% end %></li>
+    </ul>
   </ul>
 </nav>
