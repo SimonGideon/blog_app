@@ -1,2 +1,6 @@
 module ApplicationHelper
-end
+    def current_user
+      User.first
+    end
+  end
+  
