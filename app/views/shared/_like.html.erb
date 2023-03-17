@@ -1,0 +1,10 @@
+<%= render "/shared/head"%>
+<% if current_user %>
+  <%= form_with(model: [post, post.likes.build], url: user_post_likes_path(current_user, post), method: :post, remote: true) do |form| %>
+    <%= form.hidden_field :user_id, value: current_user.id %>
+    <%= form.submit Like %>
+  <% end %>
+<% else %>
+  <%= tag.i(nil, class: "fa-solid fa-heart") %>
+<% end %>
+
