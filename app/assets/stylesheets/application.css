@@ -56,12 +56,6 @@ img {
   backdrop-filter: blur(10px);
 }
 
-.comment {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-}
-
 #comm-img {
   width: 15%;
 }
@@ -93,11 +87,5 @@ img {
   margin-top: 100px;
 }
 
-#post-sec {
-  border: 2px solid grey;
-  padding: 0.5rem;
-}
 
-.fa-heart {
-  color: green;
-}
+
