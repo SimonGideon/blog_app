@@ -1,47 +1,57 @@
-<%= render "/shared/nav_bar"%>
+<%= render "/shared/nav_bar" %>
+<%= stylesheet_link_tag "comments.css" %>
+
 <%= render "/shared/like", post: @post %>
+
 <section id="each-post">
-    <img src="<%= @post.user.photo %>">
-<div id='post-header'>
-    <p><%= @post.title %> By: <%= @post.user.name%></p>
+  <img src="<%= @post.user.photo %>">
+  <div id='post-header'>
+    <p><%= @post.title %> By: <%= @post.user.name %></p>
     <span>
       <p>comments: <%= @post.comment_counter %></p>
       <p><%= render "/shared/like", post: @post %></p><%= @post.likes_counter %>
     </span>
-</div>
-<div id="post-sec">
+  </div>
+  <div id="post-sec">
     <p>Post text: <%= @post.text %></p>
     <div id="comments">
-  <% @post.recent_comments.each do |comment| %>
-    <div class="comment">
-      <img id='comm-img' src="<%= comment.user.photo %>">
-      <p class="commenter"><%= comment.user.name %></p>
-      <p><%= comment.text %></p>
+      <span class="title">Comments</span>
+      <div id="holders">
+        <% @post.recent_comments.each do |comment| %>
+        <div class="comment-holder">
+        <span>
+          <img id='comm-img' src="<%= comment.user.photo %>">
+          <div class="user-info">
+            <p class="commenter"><%= comment.user.name %></p>
+            <p class="updated-at"><%= comment.updated_at_formatted %></p>
+          </div>
+        </span>
+          <p class="comment-txt"><%= comment.text %></p>
+        </div>
+      <% end %>
+      <%= form_with(model: [@post, @post.comments.build], url: user_post_comments_path(current_user, @post), local: true) do |form| %>
+      <% if @comment.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+          <ul>
+            <% @comment.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= form.label :text %>
+        <%= form.text_area :text %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+    <% end %>
+      </div>
     </div>
-  <% end %>
-</div>
-</div>
-<%= form_with(model: [@post, @post.comments.build], url: user_post_comments_path(current_user, @post), local: true) do |form| %>
-  <% if @comment.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
-
-      <ul>
-        <% @comment.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :text %>
-    <%= form.text_area :text %>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
-
 </section>
