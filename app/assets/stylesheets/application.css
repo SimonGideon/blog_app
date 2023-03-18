@@ -17,7 +17,6 @@ img {
   width: 50%;
 }
 
-#data-cont,
 #user-data {
   text-decoration: none;
   color: black;
@@ -42,10 +41,6 @@ img {
   align-self: flex-end;
 }
 
-#user-post p {
-  width: 50%;
-}
-
 /* posts */
 #posts {
   border-radius: 20px;
@@ -66,19 +61,6 @@ img {
 
 #posts h3 {
   margin: auto;
-}
-
-#post-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: grey;
-  padding: 0.5rem;
-}
-
-#post-header span {
-  display: flex;
-  flex-direction: row;
 }
 
 #each-post {

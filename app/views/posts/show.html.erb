@@ -8,12 +8,12 @@
   <div id='post-header'>
     <p><%= @post.title %> By: <%= @post.user.name %></p>
     <span>
-      <p>comments: <%= @post.comment_counter %></p>
-      <p><%= render "/shared/like", post: @post %></p><%= @post.likes_counter %>
+      <p><i class="fa-solid fa-comment-dots"></i><%= @post.comment_counter %></p>
+      <p><%= render "/shared/like", post: @post %><%= @post.likes_counter%></p>
     </span>
   </div>
   <div id="post-sec">
-    <p>Post text: <%= @post.text %></p>
+    <p class="post-txt">Post text: <%= @post.text %></p>
     <div id="comments">
       <span class="title">Comments</span>
       <div id="holders">
@@ -22,7 +22,7 @@
         <span>
           <img id='comm-img' src="<%= comment.user.photo %>">
           <div class="user-info">
-            <p class="commenter"><%= comment.user.name %></p>
+            <span class="commenter"><%= comment.user.name %></span>
             <p class="updated-at"><%= comment.updated_at_formatted %></p>
           </div>
         </span>
@@ -43,10 +43,8 @@
       <% end %>
 
       <div class="field">
-        <%= form.label :text %>
         <%= form.text_area :text %>
       </div>
-
       <div class="actions">
         <%= form.submit %>
       </div>
