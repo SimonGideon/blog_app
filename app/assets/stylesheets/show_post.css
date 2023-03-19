@@ -159,11 +159,6 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  border: 2px solid red;
-}
-
-#post-reaction > * {
-  border: 2px solid red;
 }
 
 #detailed #no {
