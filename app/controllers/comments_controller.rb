@@ -4,7 +4,6 @@ class CommentsController < ApplicationController
     @comment = current_user.comments.build(comment_params)
     @comment.post = @post
 
-
     if @comment.save
       @formatted_updated_at = updated_at_formatted(@comment.updated_at)
       redirect_to user_post_path(user_id: @post.user_id, id: @post.id)
