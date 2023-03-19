@@ -1,25 +1,42 @@
-<%= render "shared/user_banner" %>
 <%= render "/shared/nav_bar"%>
+<%= stylesheet_link_tag 'show_post.css'%>
 <div id="user-post">
-  <div id="span">
-    <h1>About Me:</h1>
-    <p>
-      <%= @user.bio %>
-    </p>
+  <div id="personal-info">
+    <%= render "shared/user_banner" %>
+    <div id="span">
+      <p>Bio:</p>
+      <p><%= @user.bio %></p>
+    </div>
   </div>
-  <div id="container">
-    <h2>Posts</h2>
-    <%= link_to 'New Post', new_user_post_path(current_user) %>
+  <div id="all-posts">
+    <div id="post-header">
+      <p>Posts<p>
+      <%= link_to 'New Post', new_user_post_path(@current_user), class: 'new-post-button' %>
+    </div>
     <% @user.recent_posts.each do |post| %>
-      <%= link_to user_post_path(@user, post) do %>
-        <div id="data-cont">
-          <div id="details">
+      <div id="post-cont">
+        <%= link_to user_post_path(@user, post) do %>
+          <div id="detailed">
             <p><%= post.title %></p>
-            <p id='no'>Comments: <%= post.comment_counter %></p>
-            <p id='no'>Likes: <%= post.likes_counter %></p>
+            <div id="post-reaction">
+              <p id='no'>
+                <i class="fas fa-comments"></i> <%= post.comment_counter %>
+              </p>
+              <p id='no'>
+                <i class="fas fa-thumbs-up"></i> <%= post.likes_counter %>
+              </p>
+              <div id="comments-pic">
+                <% post.recent_comments.each do |comment| %>
+                <% commenter = comment.user %>
+                <% if commenter.photo.present? %>
+                  <%= image_tag commenter.photo, class: 'commenter-photo' %>
+                <% end %>
+              <% end %> 
+              </div> 
+            </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     <% end %>
     <%= link_to "Show All Posts", user_posts_path(@user) %>
   </div>
