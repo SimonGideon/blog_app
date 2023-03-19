@@ -23,7 +23,7 @@
           <img id='comm-img' src="<%= comment.user.photo %>">
           <div class="user-info">
             <span class="commenter"><%= comment.user.name %></span>
-            <p class="updated-at"><%= comment.updated_at_formatted %></p>
+            <p class="updated-at"><%= updated_at_formatted(comment.updated_at) %></p>
           </div>
         </span>
           <p class="comment-txt"><%= comment.text %></p>
