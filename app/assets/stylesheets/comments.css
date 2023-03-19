@@ -1,7 +1,6 @@
 #comments {
-  height: fit-content;
   background-color: white;
-  box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 187px 75px rgba(0, 0, 0, 0.01), 0 105px 63px rgba(0, 0, 0, 0.05), 0 47px 47px rgba(0, 0, 0, 0.09), 0 12px 26px rgba(0, 0, 0, 0.1), 0 0 0 rgba(0, 0, 0, 0.1);
   border-radius: 17px 17px 27px 27px;
 }
 
@@ -32,6 +31,17 @@
   height: 2rem;
 }
 
+.user-info span {
+  font-weight: 700;
+  color: #47484b;
+}
+
+.comment-holder span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 #holders {
   padding: 10px 20px;
 }
@@ -46,26 +56,12 @@
   justify-content: center;
 }
 
-.comment-holder span {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
 .user-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   padding: 0;
-}
-
-.user-info span {
-  font-weight: 700;
-  color: #47484b;
-}
-
-.user-info p {
   font-weight: 600;
   font-size: 10px;
   color: #acaeb4;
@@ -83,8 +79,11 @@
   color: #5f6064;
 }
 
+textarea:focus {
+  outline: none;
+}
+
 div.field textarea {
-  width: 98.5%;
   height: 100px;
   font-family: Arial, sans-serif;
   font-size: 16px;
@@ -94,10 +93,6 @@ div.field textarea {
   resize: vertical;
   width: 100%;
   box-sizing: border-box;
-}
-
-textarea:focus {
-  outline: none;
 }
 
 div.actions input[type="submit"] {
