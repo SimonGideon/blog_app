@@ -29,14 +29,6 @@ img {
   margin: 1rem;
 }
 
-#details {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 2rem;
-  width: 100%;
-}
-
 #no {
   align-self: flex-end;
 }
