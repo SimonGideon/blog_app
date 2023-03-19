@@ -9,15 +9,12 @@ img {
   margin-top: 100px;
 }
 
-#user-data {
-  width: 100%;
-}
-
 #data-count {
   width: 50%;
 }
 
 #user-data {
+  width: 100%;
   text-decoration: none;
   color: black;
   display: flex;
@@ -60,6 +57,3 @@ img {
   margin: auto;
   margin-top: 100px;
 }
-
-
-
