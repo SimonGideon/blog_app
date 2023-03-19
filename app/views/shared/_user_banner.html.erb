@@ -1,9 +1,10 @@
 <div id="container">
-<div id="data-cont">
+  <div id="data-cont">
     <img src="<%= @user.photo %>">
-    <div id="details">
-    <p>User: <%= @user.name %></p>
-    <p id='no'>Number of Posts: <%= @user.posts_counter %></p>
+    <div id="user-details">
+      <p><span>User </span><%= @user.name %></p>
+      <p id='no'>Joined <em><%= updated_at_formatted(@user.created_at) %></em></p>
+      <p>Made <span class="post-counter"><i class="fas fa-pencil-alt"></i><%= @user.posts_counter %></span> posts</p>
     </div>
   </div>
 </div>
