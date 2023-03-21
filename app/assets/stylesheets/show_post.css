@@ -51,7 +51,8 @@
   max-width: 400px;
   border-radius: 1.5rem;
   background-color: white;
-  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0,
+  box-shadow:
+    rgba(60, 64, 67, 0.3) 0 1px 2px 0,
     rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
   border: 1px solid transparent;
 }
@@ -127,7 +128,8 @@
   cursor: move;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: rgba(67, 71, 85, 0.27) 0 0 0.25em,
+  box-shadow:
+    rgba(67, 71, 85, 0.27) 0 0 0.25em,
     rgba(90, 125, 188, 0.05) 0 0.25em 1em;
   border: 3px dashed transparent;
   margin-bottom: 1rem;
