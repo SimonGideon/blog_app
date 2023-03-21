@@ -5,7 +5,7 @@ RSpec.describe 'Post index page', type: :feature do
     first_user = User.create(name: 'Jose', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', posts_counter: 0,
                              bio: 'Teacher from Mexico.')
     @post1 = Post.create(user_id: first_user.id, title: 'Hello', text: 'This is my first post', comment_counter: 0,
-                        likes_counter: 0)
+                         likes_counter: 0)
     comment = Comment.create(post: @post1, user_id: first_user.id, text: 'Hi Tom!')
 
     visit "/users/#{first_user.id}/posts"
