@@ -15,7 +15,7 @@ RSpec.describe 'Post show page', type: :feature do
     expect(page).to have_content(comment.text)
     expect(page).to have_content('Comments: 1')
     expect(page).to have_content('Likes: 0')
-    expect(page).to have_content("#{first_user.name}")
-    expect(page).to have_content("#{comment.text}")  
+    expect(page).to have_content(first_user.name.to_s)
+    expect(page).to have_content(comment.text.to_s)
   end
 end
