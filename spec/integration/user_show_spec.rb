@@ -21,6 +21,7 @@ RSpec.describe 'User show page', type: :feature do
       expect(page).to have_link(post.title)
       expect(current_path).to eql("/users/#{first_user.id}")
     end
+    expect(first_user.recent_posts.length).to eq(3)
     expect(page).to have_link('Show All Posts')
     click_link('Show All Posts')
     expect(current_path).to eq("/users/#{first_user.id}/posts")
