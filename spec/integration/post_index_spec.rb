@@ -7,7 +7,6 @@ RSpec.describe 'Post index page', type: :feature do
     @post1 = Post.create(user_id: first_user.id, title: 'Hello', text: 'This is my first post', comment_counter: 0,
                          likes_counter: 0)
     comment = Comment.create(post: @post1, user_id: first_user.id, text: 'Hi Tom!')
-
     visit "/users/#{first_user.id}/posts"
     expect(page).to have_content(first_user.name)
     expect(page).to have_css("img[src*='#{first_user.photo}']")
