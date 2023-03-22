@@ -1,4 +1,8 @@
-<%= form_with(model: [@user, @post], url: user_posts_path(@user), local: true) do |form| %>
+<%= stylesheet_link_tag "new_post" %>
+<section>
+  <p>Create a new post</p>
+  <div id="create-post">
+    <%= form_with(model: [@user, @post], url: user_posts_path(@user), local: true) do |form| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -25,3 +29,6 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+  </div>
+</section>
