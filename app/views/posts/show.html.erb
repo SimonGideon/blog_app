@@ -8,8 +8,8 @@
   <div id='post-header'>
     <p><%= @post.title %> By: <%= @post.user.name %></p>
     <span>
-      <p><i class="fa-solid fa-comment-dots"></i><%= @post.comment_counter %></p>
-      <p><%= render "/shared/like", post: @post %><%= @post.likes_counter%></p>
+      <p><i class="fa-solid fa-comment-dots"></i>Comments: <%= @post.comment_counter %></p>
+      <p><%= render "/shared/like", post: @post %>Likes: <%= @post.likes_counter%></p>
     </span>
   </div>
   <div id="post-sec">
