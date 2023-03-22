@@ -9,7 +9,7 @@ RSpec.describe 'User index page', type: :feature do
     visit '/users'
     expect(page).to have_content(first_user.name)
     expect(page).to have_css("img[src*='#{first_user.photo}']")
-    expect(page).to have_content("Number of Posts: 1")
+    expect(page).to have_content('Number of Posts: 1')
     click_on first_user.name
     expect(current_path).to eq(user_path(first_user))
   end
