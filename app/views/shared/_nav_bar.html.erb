@@ -18,6 +18,9 @@
       <li><%= link_to  do %><i class="fas fa-bell"></i><% end %></li>
       <li><%= link_to  do %><i class="fas fa-envelope"></i><% end %></li>
       <li><%= link_to  do %><i class="fas fa-user"></i><% end %></li>
+      <% if user_signed_in? %>
+      <% else %>
+      <% end %>
     </ul>
   </ul>
 </nav>

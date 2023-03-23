@@ -11,7 +11,7 @@
   <div id="all-posts">
     <div id="post-header">
       <p>Posts<p>
-      <%= link_to 'New Post', new_user_post_path(@current_user), class: 'new-post-button' %>
+      <%= link_to 'New Post', new_user_post_path(current_user), class: 'new-post-button' %>
     </div>
     <% @user.recent_posts.each do |post| %>
       <div id="post-cont">
