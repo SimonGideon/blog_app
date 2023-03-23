@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Post, type: :model do
   user = User.create(name: 'Luke', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Dj from Kenya.')
-  post = Post.new(title: 'My first post', text: 'This is my first post', user: user)
+  post = Post.new(title: 'My first post', text: 'This is my first post', user:)
   before { post.save }
   describe 'validations' do
     it 'is not valid without a title' do
