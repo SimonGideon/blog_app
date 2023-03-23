@@ -1,10 +1,16 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.2'
+# device
+gem 'devise'
 
+# ruby
+ruby '3.2.1'
+
+# linters
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+# rspec for testing
 gem 'rspec-rails', '~> 4.0.0.beta2'
 
 gem 'rails-controller-testing'
@@ -61,9 +67,11 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
+  # letter opener gem
+  gem 'letter_opener', '~> 1.4', '>= 1.4.1'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
-  # gem "rack-mini-profiler"
+  # gem "rack-mini-profiler"gem 'devise'
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
