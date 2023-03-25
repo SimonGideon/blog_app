@@ -12,4 +12,8 @@ class User < ApplicationRecord
   def recent_posts
     posts.order(created_at: :desc).limit(3)
   end
+
+  def after_confirmation
+    WelcomeMailer.send_greetings_notification(self).deliver_now
+  end
 end
