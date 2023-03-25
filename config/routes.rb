@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: {
+  devise_for :users, controllers: { 
     sessions: 'user/sessions',
     passwords: 'user/passwords',
     registrations: 'user/registrations'
@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/search', to: 'search#index', as: 'search'
 
   devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
     authenticated :user do
       root 'users#index'
     end
