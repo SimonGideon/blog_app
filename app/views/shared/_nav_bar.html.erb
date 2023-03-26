@@ -18,7 +18,7 @@
       <li><%= link_to  do %><i class="fas fa-bell"></i><% end %></li>
       <li><%= link_to  do %><i class="fas fa-envelope"></i><% end %></li>
       <li><%= link_to  do %><i class="fas fa-user"></i><% end %></li>
-        <li><%= @user.name%></li>
+        <li><%= @current_user.name%></li>
       <% if user_signed_in? %>
         <li><%= link_to destroy_user_session_path, data: { turbo_delete: :delete} do %><i class="fas fa-sign-out-alt"></i><% end %></li>
       <% else %>

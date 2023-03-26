@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
   before_action :set_posts, only: [:show, :edit, :update, :destroy]
   def index
     @user = User.includes(:posts).find(params[:user_id])

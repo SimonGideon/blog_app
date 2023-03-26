@@ -11,7 +11,9 @@
   <div id="all-posts">
     <div id="post-header">
       <p>Posts<p>
-      <%= link_to 'New Post', new_user_post_path(current_user), class: 'new-post-button' %>
+      <% if can? :create, Post%>
+        <%= link_to 'New Post', new_user_post_path(current_user), class: 'new-post-button' %>
+      <% end %>
     </div>
     <% @user.recent_posts.each do |post| %>
       <div id="post-cont">
