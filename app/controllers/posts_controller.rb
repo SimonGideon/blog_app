@@ -1,10 +1,9 @@
 class PostsController < ApplicationController
   load_and_authorize_resource
-  before_action :set_posts, only: [:show, :edit, :update, :destroy]
+  before_action :set_posts, only: %i[show edit update destroy]
   def index
     @user = User.includes(:posts).find(params[:user_id])
     @posts = @user.posts.includes(:comments)
-    
   end
 
   def show
@@ -39,13 +38,10 @@ class PostsController < ApplicationController
   end
 
   private
+
   def set_posts
     @user = User.includes(:posts).find(params[:user_id])
     @post = @user.posts.find(params[:id])
-  end
-
-  def post_params
-    params.require(:post).permit(:title, :text)
   end
 
   def post_params
