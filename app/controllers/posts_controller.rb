@@ -33,6 +33,7 @@ class PostsController < ApplicationController
     @post.comments.destroy_all
     @post.likes.destroy_all
     @posts.destroy
+    @post.update_post_counter
     redirect_to user_post_path, notice: 'Post was successfully deleted.'
   end
 
