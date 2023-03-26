@@ -1,7 +1,9 @@
 class PostsController < ApplicationController
+  before_action :set_posts, only: [:show, :edit, :update, :destroy]
   def index
     @user = User.includes(:posts).find(params[:user_id])
     @posts = @user.posts.includes(:comments)
+    
   end
 
   def show
@@ -26,7 +28,23 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    @posts = Post.find(params[:id])
+    @post.comments.destroy_all
+    @post.likes.destroy_all
+    @posts.destroy
+    redirect_to user_post_path, notice: 'Post was successfully deleted.'
+  end
+
   private
+  def set_posts
+    @user = User.includes(:posts).find(params[:user_id])
+    @post = @user.posts.find(params[:id])
+  end
+
+  def post_params
+    params.require(:post).permit(:title, :text)
+  end
 
   def post_params
     params.require(:post).permit(:title, :text)

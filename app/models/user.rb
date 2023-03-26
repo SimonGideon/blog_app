@@ -16,4 +16,8 @@ class User < ApplicationRecord
   def after_confirmation
     WelcomeMailer.send_greetings_notification(self).deliver_now
   end
+
+  def admin?
+    role == 'admin'
+  end
 end
